@@ -3,12 +3,12 @@ import java.lang.*;
 import java.io.*;
 
 
-public class first {
+public class calculator {
 
     public static void main (String[] args) throws java.lang.Exception {
-        int numberOne = 30;
-        int numberTwo = 50;
-        int result = numberOne + numberTwo;
+        int a = 30;
+        int b = 50;
+        int result = a + b;
 
         System.out.println(result);
     }
