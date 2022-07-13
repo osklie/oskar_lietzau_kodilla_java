@@ -7,7 +7,9 @@ public class calculator {
         int a = 30;
         int b = 50;
         int result = a + b;
+        int result1 = a - b;
 
         System.out.println(result);
+        System.out.println(result1);
     }
 }
