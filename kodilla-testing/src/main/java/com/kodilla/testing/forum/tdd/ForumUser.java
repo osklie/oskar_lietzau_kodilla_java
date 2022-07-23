@@ -10,6 +10,7 @@ public class ForumUser {
 
     private String name;
     private String realName;
+    private String author;
     private List<ForumPost> posts = new ArrayList<>();
     private List<ForumComment> comments = new LinkedList<>();
 
@@ -19,9 +20,12 @@ public class ForumUser {
         //real name of the user
         this.realName = realName;
     }
+    //public void author(String name) {
+    //    this.author = author;
+    //}
 
     public void addPost(String author, String postBody) {
-        // do nothing
+        //this.author = author;
     }
 
     public void addComment(ForumPost thePost, String author, String commentBody) {
