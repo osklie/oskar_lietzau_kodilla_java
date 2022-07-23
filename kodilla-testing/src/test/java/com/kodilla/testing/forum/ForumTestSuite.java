@@ -10,7 +10,6 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 class ForumTestSuite {
     @BeforeEach
@@ -71,13 +70,24 @@ class ForumTestSuite {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
 
-        ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
+       // ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
 
-        List<String> resultUsers = new ArrayList<>();
-        resultUsers.add("User1");
-        when(statisticsMock.usersNames()).thenReturn(resultUsers);
-        when(statisticsMock.postsCount()).thenReturn(6);
-        when(statisticsMock.commentsCount()).thenReturn(1);
+       // List<String> resultUsers = new ArrayList<>();
+        //resultUsers.add("User1");
+       // when(statisticsMock.usersNames()).thenReturn(resultUsers);
+       // when(statisticsMock.postsCount()).thenReturn(6);
+      //  when(statisticsMock.commentsCount()).thenReturn(1);
+
+        ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
+        List<Statistics> resultUsers = new ArrayList<>();
+        Statistics user1 = new Statistics("User1", 5, 2);
+        Statistics user2 = new Statistics("User2", 0,32);
+        Statistics user3 = new Statistics("User3", 11, 0);
+        Statistics user4 = new Statistics("User4", 36, 1);
+        resultUsers.add(user1);
+        resultUsers.add(user2);
+        resultUsers.add(user3);
+        resultUsers.add(user4);
 
         //resultUsers.add("User2");
         //when(statisticsMock.usersNames()).thenReturn(resultUsers);
@@ -90,7 +100,7 @@ class ForumTestSuite {
         forumStatistics.calculateAdvStatistics(statisticsMock);
 
         //Then
-        assertEquals(1, forumStatistics.getUseResult());
+        assertEquals(4, forumStatistics.getUseResult());
 
         System.out.println(resultUsers);
         System.out.println(statisticsMock.postsCount());
@@ -113,12 +123,14 @@ class ForumTestSuite {
 
 
         public void calculateAdvStatistics(Statistics statistics) {
-            postsResult = statistics.postsCount();
+            postsResult = statistics.commentsCount();
             commentsResult = statistics.commentsCount();
-            usersResult = statistics.usersNames().size();
+            usersResult = Integer.parseInt(statistics.usersNames());
             double advPostsForUser = postsResult / usersResult;
             double advCommentsForUser = commentsResult / usersResult;
             double advCommentsForPost = commentsResult / postsResult;
+
+
             System.out.println(advPostsForUser);
             System.out.println(advCommentsForUser);
             System.out.println(advCommentsForPost);

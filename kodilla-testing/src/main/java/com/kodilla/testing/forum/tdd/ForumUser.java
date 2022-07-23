@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ForumUser {
 
-    private String name;
+    private String usersNames;
     private String realName;
     private String author;
     private List<ForumPost> posts = new ArrayList<>();
@@ -16,7 +16,7 @@ public class ForumUser {
 
     public ForumUser(String name, String realName) {
         //name visible on forum
-        this.name = name;
+        this.usersNames = name;
         //real name of the user
         this.realName = realName;
     }
@@ -63,7 +63,7 @@ public class ForumUser {
     }
 
     public String getName() {
-        return name;
+        return usersNames;
     }
 
     public String getRealName() {
