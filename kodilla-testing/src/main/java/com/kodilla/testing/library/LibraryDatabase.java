@@ -8,7 +8,7 @@ public interface LibraryDatabase {
     List<book> listBooksWithCondition(String titleFragment);
 
     // list books borrowed by libraryUser
-    static List<book> listBooksInHandsOf(LibraryUser libraryUser);
+    //static List<book> listBooksInHandsOf(LibraryUser libraryUser);
 
     // try to rent a book for libraryUser
     // returns true when success
