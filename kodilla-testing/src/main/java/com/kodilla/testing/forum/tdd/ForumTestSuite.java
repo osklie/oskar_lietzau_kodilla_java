@@ -5,6 +5,7 @@ import org.junit.jupiter.api.*;
 
 
 @DisplayName("TDD: Forum Test Suite \uD83D\uDE31")
+public
 class ForumTestSuite {
 
     private static int testCounter = 0;
