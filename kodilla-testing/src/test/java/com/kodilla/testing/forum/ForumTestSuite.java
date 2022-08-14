@@ -10,6 +10,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 class ForumTestSuite {
     @BeforeEach
@@ -70,13 +71,13 @@ class ForumTestSuite {
         //Given
         Statistics statisticsMock = mock(Statistics.class);
 
-       // ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
+        ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
 
-       // List<String> resultUsers = new ArrayList<>();
-        //resultUsers.add("User1");
-       // when(statisticsMock.usersNames()).thenReturn(resultUsers);
-       // when(statisticsMock.postsCount()).thenReturn(6);
-      //  when(statisticsMock.commentsCount()).thenReturn(1);
+        List<String> resultUsers = new ArrayList<>();
+        resultUsers.add("User1");
+        when(statisticsMock.usersNames()).thenReturn(resultUsers);
+        when(statisticsMock.postsCount()).thenReturn(6);
+        when(statisticsMock.commentsCount()).thenReturn(1);
 
         ForumStatistics forumStatistics = new ForumStatistics(statisticsMock);
         List<Statistics> resultUsers = new ArrayList<>();
@@ -89,10 +90,10 @@ class ForumTestSuite {
         resultUsers.add(user3);
         resultUsers.add(user4);
 
-        //resultUsers.add("User2");
-        //when(statisticsMock.usersNames()).thenReturn(resultUsers);
-        //when(statisticsMock.postsCount()).thenReturn(20);
-        //when(statisticsMock.commentsCount()).thenReturn(10);
+        resultUsers.add("User2");
+        when(statisticsMock.usersNames()).thenReturn(resultUsers);
+        when(statisticsMock.postsCount()).thenReturn(20);
+        when(statisticsMock.commentsCount()).thenReturn(10);
 
 
 

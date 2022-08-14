@@ -9,9 +9,9 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
-public class BookDirectoryTestSuite {}
+public class BookDirectoryTestSuite {
 
- /*   private LibraryDatabase libraryDatabaseMock;
+    private LibraryDatabase libraryDatabaseMock;
     private BookLibrary bookLibrary;
 
     @Before
@@ -128,4 +128,4 @@ public class BookDirectoryTestSuite {}
         return resultList;
     }
     }
-}*/
+}

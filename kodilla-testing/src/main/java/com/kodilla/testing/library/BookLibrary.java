@@ -32,9 +32,9 @@ public class BookLibrary {
             return bookList;
         }
     }
-   /* public static List<book> ListBooksInHandsOf(LibraryUser libraryUser){
+    public static List<book> ListBooksInHandsOf(LibraryUser libraryUser){
         List<book>libraryUserBooksInHandsOf = LibraryDatabase.listBooksInHandsOf(libraryUser);
 
         return libraryUserBooksInHandsOf;
-    }*/
+    }
 }

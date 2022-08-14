@@ -7,12 +7,12 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 
-/*public class statistic {
+public class statistic {
 
     public static void main(String[] args) {
 
         String usersNames;
-        int postsCount = ;
+        int postsCount = 0;
         int commentsCount = 0;
 
 
@@ -30,4 +30,4 @@ import static org.mockito.Mockito.mock;
 
     }
 
-}*/
+}

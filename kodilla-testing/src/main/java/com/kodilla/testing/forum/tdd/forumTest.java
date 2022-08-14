@@ -6,7 +6,7 @@ import com.kodilla.testing.forum.tdd.ForumPost;
 import com.kodilla.testing.forum.tdd.ForumUser;
 import org.junit.*;
 
-/*
+
 public class forumTest {
     private static int testCounter = 0;
 
@@ -151,5 +151,6 @@ public class forumTest {
         Assert.assertTrue(result);
         assertEquals(0, forumUser.getCommentsQuantity());
     }
+}
 
 
