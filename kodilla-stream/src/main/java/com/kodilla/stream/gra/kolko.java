@@ -1,3 +1,5 @@
+package com.kodilla.stream.gra;
+
 import java.util.*;
 
 public class kolko {
