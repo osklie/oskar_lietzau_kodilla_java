@@ -9,9 +9,9 @@ public class Order {
     private final List<Item> items = new ArrayList<>();
     private final Long orderId;
     private final Long userId;
-    private boolean isPaid = false;
-    private boolean isVerified =  false;
-    private boolean isSubmitted = false;
+    private boolean isPaid;
+    private boolean isVerified;
+    private boolean isSubmitted;
 
     public Order(Long orderId, Long userId, ProductService productService) {
         this.orderId = orderId;
@@ -19,20 +19,27 @@ public class Order {
         this.productService = productService;
     }
 
+
     public BigDecimal calculateValue() {
         BigDecimal sum = BigDecimal.ZERO;
-        for (Item item: items) {
-            sum = sum.add(productService.getPrice(item.getProductId()))
-                    .multiply(new BigDecimal(item.getQty()));
+        for (Item item : items) {
+            sum = sum.add(productService.getPrice(item.getProductId())
+                    .multiply(new BigDecimal(item.getQty())));
         }
         return sum;
     }
 
-    public List<Item> getItems() { return items; }
+    public List<Item> getItems() {
+        return items;
+    }
 
-    public Long getOrderId() { return orderId; }
+    public Long getOrderId() {
+        return orderId;
+    }
 
-    public Long getUserId() { return userId; }
+    public Long getUserId() {
+        return userId;
+    }
 
     public boolean isPaid() {
         return isPaid;
