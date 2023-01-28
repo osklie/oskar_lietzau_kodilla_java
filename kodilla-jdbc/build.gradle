@@ -15,7 +15,8 @@ repositories {
 dependencies {
 	implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
 	implementation 'org.springframework.boot:spring-boot-starter'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.testng:testng:7.1.0'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 tasks.named('test') {
