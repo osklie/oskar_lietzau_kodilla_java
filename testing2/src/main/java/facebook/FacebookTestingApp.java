@@ -32,4 +32,5 @@ public class FacebookTestingApp {
         Select selectYear = new Select(selectComboYear);
         selectYear.selectByIndex(20);
     }
+
 }
