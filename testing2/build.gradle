@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'com.kodilla'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'junit:junit:4.13.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    //testImplementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.8.0'
+    testImplementation group: 'org.ops4j.pax.url', name: 'pax-url-aether', version: '2.6.12'
+
+}
+
+test {
+    useJUnitPlatform()
+}
